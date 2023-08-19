@@ -8,14 +8,11 @@ import java.util.Scanner;
 boolean isPrime=true;
 while(div<=n/2){
 if(n%div==0){
-isPrime=false;
+System.out.println("composite");
+return;
 }
 div=div+1;
 }
-if(isPrime){
 System.out.println("prime");
-}else{
-System.out.println("composite");
-}
 }
 }
