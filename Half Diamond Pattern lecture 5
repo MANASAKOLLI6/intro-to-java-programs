@@ -1,0 +1,116 @@
+Write a program to print N number of rows for Half Diamond pattern using stars and numbers
+Note : There are no spaces between the characters in a single line.
+
+
+Input Format :
+A single integer: N
+Output Format :
+Required Pattern
+Constraints :
+0 <= N <= 50
+Sample Input 1 :
+3
+Sample Output 1 :
+*
+*1*
+*121*
+*12321*
+*121*
+*1*
+*
+Sample Input 2 :
+ 5
+Sample Output 2 :
+*
+*1*
+*121*
+*12321*
+*1234321*
+*123454321*
+*1234321*
+*12321*
+*121*
+*1*
+*
+
+Code:
+
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        if(n==0){
+            System.out.println("*");
+              System.out.println("*");
+            return;
+        }
+        int i = 0;
+        int w = 1;
+        while (i <=n){
+            int j = 0 ;
+            while (j<=i){
+                j++;
+            }
+            System.out.print("*");
+            int x = 1;
+            int t = 1;
+            while (x <= i){
+                System.out.print(t);
+                t++;
+                x++;
+            }
+            int r = 2;
+            int q = i-1 ;
+            while(r<=i){
+                System.out.print(q);
+                q--;
+                r++;
+            }
+
+            int va = 1;
+            while(va <=i){
+          if(va == 1){
+                    System.out.print('*');
+                }
+                va++;
+            }
+            System.out.println();
+            i++;
+        }
+        int ma = 1;
+        while (n!=0){
+            int d = 1;
+            while(d<=ma){
+                d++;
+            }
+            System.out.print('*');
+            int sud = 1;
+            int pra = 1;
+            while (sud < n){
+                System.out.print(pra);
+                pra = pra+1;
+                sud++;
+            }
+            int pa = 1;
+            int ya = n-2;
+            while (pa<= n-2){
+                System.out.print(ya);
+                ya--;
+                pa++;
+            }
+            int ch = 1;
+            while(ch < n){
+                if (ch==1){
+                    System.out.print('*');
+                }
+                ch++;
+            }
+            System.out.println();
+            n--;
+            ma++;
+        }
+    }
+}
