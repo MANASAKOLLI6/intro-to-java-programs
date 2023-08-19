@@ -1,0 +1,61 @@
+Write a program to print the pattern for the given N number of rows.
+For N = 4
+1357
+3571
+5713
+7135
+Input Format :
+A single integer: N
+Output Format :
+Required Pattern
+Constraints :
+0 <= N <= 50
+Sample Input 1 :
+3
+Sample Output 1 :
+135
+351
+513
+Sample Input 2 :
+ 5
+Sample Output 2 :
+13579
+35791
+57913
+79135
+91357
+
+Code:
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner m = new Scanner(System.in);
+        int n = m.nextInt();
+        int o = 1;
+        int i = 1;
+        while (n!=0){
+            int j = 1;
+            int t = o;
+            while (j<=n){
+                System.out.print(t);
+                t = t+2;
+                j++;
+            }
+            int x = 1;
+            int y = 1;
+            while (x <i){
+                System.out.print(y);
+                y = y+2;
+                x++;
+            }
+            System.out.println();
+            n--;
+            o = o+2;
+            i++;
+            
+        }
+	}
+}
