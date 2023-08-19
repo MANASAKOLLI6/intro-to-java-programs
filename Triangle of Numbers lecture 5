@@ -1,0 +1,76 @@
+Print the following pattern for the given number of rows.
+Pattern for N = 4
+
+
+
+The dots represent spaces.
+
+
+
+Input format :
+Integer N (Total no. of rows)
+Output format :
+Pattern in N lines
+Constraints :
+0 <= N <= 50
+Sample Input 1:
+5
+Sample Output 1:
+           1
+         232
+       34543
+     4567654
+   567898765
+Sample Input 2:
+4
+Sample Output 2:
+           1
+         232
+       34543
+     4567654
+
+Code:
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+			Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int p=1;
+		int i=1;
+		while(i<=n){
+			p=i;
+			int spaces=1;
+			while(spaces<=n-i){
+				System.out.print(' ');
+				spaces=spaces+1;
+				
+							}
+			int stars=1;
+			while(stars<=i){
+				System.out.print(p);
+				p=p+1;
+				stars=stars+1;
+
+		
+			}
+			int dec=i-1;
+			int S=p-2;
+			while(dec>=1){
+				
+				System.out.print(S);
+				dec=dec-1;
+				S=S-1;
+				
+			}
+			System.out.println();
+			i=i+1;
+		}
+	}
+}
