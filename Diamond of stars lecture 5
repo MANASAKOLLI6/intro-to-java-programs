@@ -1,0 +1,90 @@
+Print the following pattern for the given number of rows.
+Note: N is always odd.
+
+
+Pattern for N = 5
+
+
+
+The dots represent spaces.
+
+
+
+Input format :
+N (Total no. of rows and can only be odd)
+Output format :
+Pattern in N lines
+Constraints :
+1 <= N <= 49
+Sample Input 1:
+5
+Sample Output 1:
+  *
+ ***
+*****
+ ***
+  *
+Sample Input 2:
+3
+Sample Output 2:
+  *
+ ***
+  *
+
+Code:
+
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+      Scanner m = new Scanner(System.in);
+        int n = m.nextInt();
+        int i, j,x;
+        i = 1 ;
+        float f = Math.round(n/2f);
+        while (i <= n){
+            x = 1;
+            while(x <= f -i ){
+                System.out.print(' ');
+                x++;
+            }
+            j = 1;
+            while (j <= i){
+                System.out.print('*');
+                j++;
+            }
+            int z = i-1;
+            while (z>=1){
+                System.out.print('*');
+                z--;
+            }
+            System.out.println();
+            n--;
+            i++;
+        }
+        int t = 1;
+        while(n!= 0) {
+            int k = 1;
+            while (k <= t ) {
+                System.out.print(' ');
+                k++;
+            }
+
+            int s = 1;
+            while (s <= n) {
+                System.out.print('*');
+                s++;
+            }
+            int l = n-1 ;
+            while(l>=1){
+                System.out.print('*');
+                l--;
+            }
+            System.out.println();
+            n--;
+            t++;
+
+        }
+    }
+}
