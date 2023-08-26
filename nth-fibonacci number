@@ -55,12 +55,15 @@ public class Solution {
 public static void main(String[] args) {
 	Scanner s=new Scanner(System.in);
 int n=s.nextInt();
-int a=0,b=1;
+int a=1,b=1;
 int c;
-for(int i=1;i>=0;i++) {
+if(n==1||n==2){
+	System.out.print(1);
+}
+for(int i=3;i<=n;i++) {
 	c=a+b;
-	b=a;
-	a=c;
+	a=b;
+	b=c;
 	if(i==n) {
 		System.out.print(c);
 	}
@@ -69,3 +72,4 @@ for(int i=1;i>=0;i++) {
 	}
 
 }
+
