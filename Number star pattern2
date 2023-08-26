@@ -1,0 +1,47 @@
+Print the following pattern for given number of rows.
+Input format :
+
+Line 1 : N (Total number of rows)
+
+Sample Input :
+   5
+Sample Output :
+1234554321
+1234**4321
+123****321
+12******21
+1********1
+
+Code:
+
+import java.util.*;
+public class Solution {
+
+	public static void main(String[] args) {
+
+	 Scanner sc = new Scanner(System.in);
+	 int n = sc.nextInt();
+	 int l=n;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=n;j>=i;j--)
+        {
+            System.out.print(n-j+1);
+        }
+        if(i>1)
+        {
+        for(int p=1;p<=2*(i-1);p++)
+        {
+            System.out.print("*");
+        }
+        }
+        for(int j=l;j>=1;j--)
+        {
+            System.out.print(j);
+            
+        }
+        l=l-1;
+        System.out.println();
+    }
+	}
+}
